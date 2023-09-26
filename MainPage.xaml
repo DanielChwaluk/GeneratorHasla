@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="haslo.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Margin="25,25,25,25">
+            <Label
+                Text="HASŁO"
+                FontSize="60"
+                />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <CheckBox
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    x:Name="ChkMaleLit"
+                    />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="Małe litery"
+                    />
+                <CheckBox
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    x:Name="ChkDuzeLit"
+                    />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="Duże litery"
+                    />
+                <CheckBox
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    x:Name="ChkCyfry"
+                    />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Text="Cyfry"
+                    />
+                <CheckBox
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    x:Name="ChkZnakSpec"
+                    />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Text="Znaki specjalne"
+                    />
+            </Grid>
+            <Button
+                Text="Generuj"
+                Clicked="OnGenPasClicked"
+                WidthRequest="125"
+                VerticalOptions="Center"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Column="0"
+                    FontSize="25"
+                    Text="Wynik: "/>
+                <Label
+                    Grid.Column="1"
+                    FontSize="25"
+                    Text=""
+                    x:Name="LblWynik"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
